@@ -1,0 +1,278 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #e1e4e8;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin: 0 -16px;
+  padding: 16px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1d9bf0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Auth */
+.auth-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #e1e4e8;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  border-color: #1d9bf0;
+  color: #1d9bf0;
+  background: #e8f5fe;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #e1e4e8;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #1d9bf0;
+}
+
+/* Buttons */
+.btn-primary {
+  padding: 12px 20px;
+  background: #1d9bf0;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #1a8cd8;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-logout {
+  padding: 6px 14px;
+  background: transparent;
+  color: #e0245e;
+  border: 1.5px solid #e0245e;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background: #e0245e;
+  color: #fff;
+}
+
+.btn-delete {
+  padding: 3px 10px;
+  background: transparent;
+  color: #e0245e;
+  border: 1px solid #e0245e;
+  border-radius: 9999px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: auto;
+}
+
+.btn-delete:hover {
+  background: #e0245e;
+  color: #fff;
+}
+
+/* Post Form */
+.post-form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+textarea {
+  width: 100%;
+  min-height: 80px;
+  border: none;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f2f5;
+}
+
+.char-count {
+  font-size: 14px;
+  color: #999;
+}
+
+.char-count.warning {
+  color: #e0245e;
+  font-weight: 600;
+}
+
+/* Tweets */
+.tweets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 40px;
+}
+
+.tweet {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s;
+}
+
+.tweet:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tweet-user {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1d9bf0;
+}
+
+.tweet-time {
+  font-size: 13px;
+  color: #999;
+}
+
+.tweet-content {
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Messages */
+.message {
+  font-size: 14px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.message.error {
+  color: #e0245e;
+  background: #fde8ef;
+}
+
+.message.success {
+  color: #17bf63;
+  background: #e6f8ef;
+}
+
+.loading, .empty, .error-msg {
+  text-align: center;
+  padding: 40px 16px;
+  color: #999;
+  font-size: 15px;
+}
+
+/* Auth page logo */
+.container > .logo {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 28px;
+}
