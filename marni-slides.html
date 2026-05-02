@@ -36,9 +36,7 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ===== SLIDE LAYOUTS ===== */
-
-    /* COVER */
+    /* ===== COVER ===== */
     .slide-cover {
       background: #000;
       flex-direction: column;
@@ -71,7 +69,7 @@
       opacity: 0.4;
     }
 
-    /* CONTENT BASE */
+    /* ===== CONTENT BASE ===== */
     .slide-content {
       flex-direction: row;
     }
@@ -82,33 +80,34 @@
     }
     .slide-inner {
       flex: 1;
-      padding: clamp(30px, 5vw, 80px) clamp(30px, 6vw, 100px);
+      padding: clamp(28px, 4.5vw, 70px) clamp(28px, 5.5vw, 90px);
       background: #faf8f5;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      overflow: hidden;
     }
     .slide-label {
       font-size: 11px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: #aaa;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .slide-title {
-      font-size: clamp(28px, 4vw, 56px);
+      font-size: clamp(26px, 3.8vw, 52px);
       font-weight: 300;
       line-height: 1.15;
       color: #111;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
     .slide-title span { color: #e63946; }
 
-    /* TIMELINE */
+    /* ===== TIMELINE ===== */
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 14px;
     }
     .timeline-item {
       display: flex;
@@ -116,51 +115,52 @@
       gap: 20px;
     }
     .timeline-year {
-      font-size: clamp(13px, 1.5vw, 18px);
+      font-size: clamp(12px, 1.4vw, 16px);
       font-weight: 700;
       color: #e63946;
-      min-width: 55px;
+      min-width: 52px;
       letter-spacing: 0.05em;
+      padding-top: 2px;
     }
     .timeline-text {
-      font-size: clamp(12px, 1.4vw, 17px);
+      font-size: clamp(11px, 1.25vw, 15px);
       line-height: 1.6;
       color: #444;
       border-left: 2px solid #e5e0d8;
-      padding-left: 16px;
+      padding-left: 14px;
     }
 
-    /* CARDS */
+    /* ===== CARDS ===== */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      gap: 16px;
     }
     .card {
       background: #fff;
       border-radius: 4px;
-      padding: clamp(16px, 2vw, 28px);
+      padding: clamp(14px, 1.8vw, 24px);
       border-top: 3px solid #e63946;
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
     .card-icon {
-      font-size: 28px;
-      margin-bottom: 10px;
+      font-size: 26px;
+      margin-bottom: 8px;
     }
     .card-title {
-      font-size: clamp(13px, 1.3vw, 17px);
+      font-size: clamp(12px, 1.2vw, 16px);
       font-weight: 700;
       color: #111;
-      margin-bottom: 8px;
-      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+      letter-spacing: 0.04em;
     }
     .card-text {
-      font-size: clamp(11px, 1.1vw, 14px);
+      font-size: clamp(10px, 1vw, 13px);
       color: #666;
       line-height: 1.65;
     }
 
-    /* SPLIT */
+    /* ===== SPLIT ===== */
     .slide-split {
       flex-direction: row;
     }
@@ -170,7 +170,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: clamp(30px, 5vw, 80px);
+      padding: clamp(28px, 4.5vw, 72px);
       color: #fff;
     }
     .split-right {
@@ -179,60 +179,69 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: clamp(30px, 5vw, 80px);
+      padding: clamp(28px, 4.5vw, 72px);
     }
     .split-label {
       font-size: 11px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: #888;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .split-name {
-      font-size: clamp(24px, 3.5vw, 48px);
+      font-size: clamp(22px, 3.2vw, 44px);
       font-weight: 300;
       line-height: 1.2;
       color: #fff;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .split-name-dark {
-      font-size: clamp(24px, 3.5vw, 48px);
+      font-size: clamp(22px, 3.2vw, 44px);
       font-weight: 300;
       line-height: 1.2;
       color: #111;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .split-period {
-      font-size: clamp(12px, 1.2vw, 16px);
+      font-size: clamp(11px, 1.1vw, 15px);
       color: #e63946;
       letter-spacing: 0.15em;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .split-desc {
-      font-size: clamp(12px, 1.2vw, 15px);
+      font-size: clamp(11px, 1.1vw, 14px);
       line-height: 1.75;
       color: #bbb;
     }
     .split-desc-dark {
-      font-size: clamp(12px, 1.2vw, 15px);
+      font-size: clamp(11px, 1.1vw, 14px);
       line-height: 1.75;
       color: #555;
     }
+    .split-divider {
+      height: 1px;
+      background: #333;
+      margin: 18px 0;
+    }
+    .split-divider-light {
+      height: 1px;
+      background: #e5e0d8;
+      margin: 18px 0;
+    }
 
-    /* ITEMS */
+    /* ===== ITEMS GRID ===== */
     .items-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 14px;
     }
     .item-box {
       background: #fff;
       border-radius: 4px;
-      padding: 20px 16px;
+      padding: 18px 14px;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       border-bottom: 3px solid transparent;
-      transition: border-color 0.2s;
     }
     .item-box:nth-child(1) { border-color: #e63946; }
     .item-box:nth-child(2) { border-color: #f4a261; }
@@ -240,44 +249,107 @@
     .item-box:nth-child(4) { border-color: #457b9d; }
     .item-box:nth-child(5) { border-color: #e9c46a; }
     .item-box:nth-child(6) { border-color: #6d6875; }
-    .item-icon { font-size: 32px; margin-bottom: 10px; }
+    .item-icon { font-size: 30px; margin-bottom: 8px; }
     .item-name {
-      font-size: clamp(12px, 1.2vw, 15px);
+      font-size: clamp(11px, 1.1vw, 14px);
       font-weight: 700;
       color: #111;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
     .item-note {
-      font-size: clamp(10px, 1vw, 13px);
+      font-size: clamp(10px, 0.95vw, 12px);
       color: #888;
       line-height: 1.5;
     }
 
-    /* PRICE TABLE */
+    /* ===== PRICE TABLE ===== */
     .price-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 8px;
+      margin-top: 6px;
     }
     .price-table th {
       background: #111;
       color: #fff;
-      padding: 12px 16px;
+      padding: 10px 14px;
       text-align: left;
-      font-size: clamp(11px, 1.1vw, 14px);
+      font-size: clamp(10px, 1vw, 13px);
       letter-spacing: 0.05em;
       font-weight: 400;
     }
     .price-table td {
-      padding: 12px 16px;
-      font-size: clamp(11px, 1.1vw, 14px);
+      padding: 10px 14px;
+      font-size: clamp(10px, 1vw, 13px);
       border-bottom: 1px solid #e8e4de;
       color: #444;
     }
     .price-table tr:nth-child(even) td { background: #f5f2ed; }
     .price-high { color: #e63946; font-weight: 700; }
 
-    /* CLOSING */
+    /* ===== DNA BANDS ===== */
+    .dna-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .dna-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .dna-icon {
+      font-size: 22px;
+      width: 40px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .dna-body {}
+    .dna-title {
+      font-size: clamp(12px, 1.2vw, 15px);
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 3px;
+    }
+    .dna-text {
+      font-size: clamp(11px, 1.05vw, 13px);
+      color: #666;
+      line-height: 1.55;
+    }
+    .dna-bar {
+      width: 4px;
+      height: 50px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ===== STAT BOXES ===== */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-box {
+      background: #fff;
+      border-radius: 4px;
+      padding: 18px 14px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .stat-num {
+      font-size: clamp(22px, 2.8vw, 36px);
+      font-weight: 300;
+      color: #e63946;
+      letter-spacing: 0.05em;
+    }
+    .stat-label {
+      font-size: clamp(10px, 0.95vw, 12px);
+      color: #888;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+
+    /* ===== CLOSING ===== */
     .slide-closing {
       background: linear-gradient(135deg, #111 0%, #2d1515 50%, #0d1a1a 100%);
       flex-direction: column;
@@ -293,9 +365,11 @@
       font-weight: 300;
     }
     .closing-tagline {
-      font-size: clamp(13px, 1.8vw, 22px);
+      font-size: clamp(13px, 1.6vw, 20px);
       color: #888;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.08em;
+      max-width: 600px;
+      line-height: 1.6;
     }
     .closing-dots {
       display: flex;
@@ -306,18 +380,18 @@
       border-radius: 50%;
     }
 
-    /* NAV */
+    /* ===== NAV ===== */
     .nav {
       position: fixed;
-      bottom: 32px;
+      bottom: 28px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       align-items: center;
-      gap: 16px;
-      background: rgba(0,0,0,0.7);
+      gap: 14px;
+      background: rgba(0,0,0,0.72);
       backdrop-filter: blur(8px);
-      padding: 10px 20px;
+      padding: 8px 18px;
       border-radius: 40px;
       z-index: 100;
     }
@@ -325,11 +399,11 @@
       background: none;
       border: 1px solid #555;
       color: #ccc;
-      padding: 6px 18px;
+      padding: 5px 16px;
       border-radius: 20px;
       cursor: pointer;
       font-size: 13px;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       transition: all 0.2s;
     }
     .nav button:hover {
@@ -345,7 +419,7 @@
       text-align: center;
     }
 
-    /* PROGRESS */
+    /* ===== PROGRESS ===== */
     .progress {
       position: fixed;
       top: 0; left: 0;
@@ -355,19 +429,19 @@
       z-index: 200;
     }
 
-    /* DOTS NAV */
+    /* ===== DOT NAV ===== */
     .dots-nav {
       position: fixed;
-      right: 24px;
+      right: 20px;
       top: 50%;
       transform: translateY(-50%);
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 7px;
       z-index: 100;
     }
     .nav-dot {
-      width: 8px; height: 8px;
+      width: 7px; height: 7px;
       border-radius: 50%;
       background: #555;
       cursor: pointer;
@@ -375,9 +449,10 @@
     }
     .nav-dot.active {
       background: #e63946;
-      transform: scale(1.4);
+      transform: scale(1.5);
     }
 
+    /* ===== TAGS ===== */
     .tag {
       display: inline-block;
       background: #e63946;
@@ -385,14 +460,56 @@
       font-size: 10px;
       padding: 2px 8px;
       border-radius: 2px;
-      letter-spacing: 0.1em;
-      margin-right: 6px;
-      margin-bottom: 6px;
+      letter-spacing: 0.08em;
+      margin-right: 5px;
+      margin-bottom: 5px;
       text-transform: uppercase;
     }
-    .tag.green { background: #2a9d8f; }
-    .tag.orange { background: #f4a261; }
-    .tag.blue { background: #457b9d; }
+    .tag.green  { background: #2a9d8f; }
+    .tag.orange { background: #f4a261; color: #333; }
+    .tag.blue   { background: #457b9d; }
+    .tag.purple { background: #6d6875; }
+
+    /* ===== TWO-COL ===== */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .col-block {
+      background: #fff;
+      border-radius: 4px;
+      padding: 20px 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .col-block-title {
+      font-size: clamp(12px, 1.2vw, 15px);
+      font-weight: 700;
+      color: #111;
+      border-bottom: 2px solid #e63946;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+    .col-block ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .col-block ul li {
+      font-size: clamp(10px, 1vw, 13px);
+      color: #555;
+      line-height: 1.55;
+      padding-left: 14px;
+      position: relative;
+    }
+    .col-block ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #e63946;
+    }
   </style>
 </head>
 <body>
@@ -406,7 +523,7 @@
     <div class="brand-name">MARNI</div>
     <div class="cover-line"></div>
     <div class="brand-sub">マルニ — ブランド研究</div>
-    <div class="brand-desc">Italian Luxury Fashion · Since 1994 · Milan</div>
+    <div class="brand-desc">Italian Luxury Fashion · Founded 1994 · Milan</div>
   </div>
 
   <!-- SLIDE 2: OVERVIEW -->
@@ -415,26 +532,40 @@
     <div class="slide-inner">
       <div class="slide-label">Overview · 概要</div>
       <div class="slide-title">マルニとは<br><span>何か</span></div>
+      <div class="stats">
+        <div class="stat-box">
+          <div class="stat-num">1994</div>
+          <div class="stat-label">創業年</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">30+</div>
+          <div class="stat-label">年の歴史</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">OTB</div>
+          <div class="stat-label">グループ（2015〜）</div>
+        </div>
+      </div>
       <div class="cards">
         <div class="card">
           <div class="card-icon">🇮🇹</div>
           <div class="card-title">設立</div>
-          <div class="card-text">1994年、イタリア・ミラノで誕生。創業者コンスエロ・カスティリオーニによるラグジュアリーファッションブランド。</div>
+          <div class="card-text">1994年、コンスエロ・カスティリオーニがミラノで創業。夫が営む毛皮会社「CiwiFurs」のライン発展から誕生した。</div>
         </div>
-        <div class="card">
+        <div class="card" style="border-top-color:#f4a261;">
           <div class="card-icon">🎨</div>
           <div class="card-title">デザイン哲学</div>
-          <div class="card-text">大胆なプリント、鮮やかな色彩、独創的なシルエット。"エクレクティック・ボヘミアニズム"として知られる。</div>
+          <div class="card-text">大胆なプリント、鮮やかな色彩、独創的なシルエット。"エクレクティック・ボヘミアニズム"が揺るぎないブランドコア。</div>
         </div>
-        <div class="card">
+        <div class="card" style="border-top-color:#2a9d8f;">
           <div class="card-icon">🏆</div>
           <div class="card-title">ブランドポジション</div>
-          <div class="card-text">グッチ・プラダと並ぶイタリアのトップラグジュアリーブランド。OTBグループ傘下（2015年〜）。</div>
+          <div class="card-text">グッチ・プラダと並ぶイタリアのトップラグジュアリーブランド。OTBグループ（ディーゼル等も傘下）に属する。</div>
         </div>
-        <div class="card">
-          <div class="card-icon">🌍</div>
-          <div class="card-title">グローバル展開</div>
-          <div class="card-text">世界主要都市に旗艦店を展開。日本では東京・南青山をはじめ全国157店舗以上で展開。</div>
+        <div class="card" style="border-top-color:#457b9d;">
+          <div class="card-icon">🌏</div>
+          <div class="card-title">日本との縁</div>
+          <div class="card-text">1999年に日本初上陸。2000年には南青山に当時世界最大（約330㎡）の旗艦店をオープン。日本市場への傾倒は創業期から顕著。</div>
         </div>
       </div>
     </div>
@@ -449,94 +580,149 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-year">1994</div>
-          <div class="timeline-text">コンスエロ・カスティリオーニが夫の毛皮会社「CiwiFurs」の一環としてミラノでマルニを創業。当初は毛皮・革製品のみ。</div>
+          <div class="timeline-text">コンスエロ・カスティリオーニが夫の毛皮会社を母体にミラノでマルニを創業。当初は毛皮・革製品のみ。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">1996</div>
+          <div class="timeline-text">ミラノコレクション（ミラノファッションウィーク）に初参加。ニット・布製品・アクセサリーをラインナップに追加。</div>
         </div>
         <div class="timeline-item">
           <div class="timeline-year">1999</div>
-          <div class="timeline-text">ブランドが独立。毛皮・革以外のラインナップに拡大。日本市場に初進出。</div>
+          <div class="timeline-text">完全独立ブランドとして再スタート。日本市場に初進出。毛皮・革以外のウェアにも本格展開。</div>
         </div>
         <div class="timeline-item">
           <div class="timeline-year">2000</div>
-          <div class="timeline-text">東京・南青山に約330㎡の世界最大旗艦店オープン。ロンドン・パリ・ニューヨークにも続けて出店。</div>
+          <div class="timeline-text">東京・南青山に当時世界最大（約330㎡）の旗艦店オープン。ロンドン・パリ・ニューヨークにも続けて出店し国際化が加速。</div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-year">2001</div>
-          <div class="timeline-text">メンズラインを正式発表。ウィメンズで確立した個性的な世界観をメンズウェアへ展開。</div>
+          <div class="timeline-year">2007</div>
+          <div class="timeline-text">メンズラインを正式発表。ウィメンズで確立したカラフルでエクレクティックな世界観をメンズウェアへ展開。</div>
         </div>
         <div class="timeline-item">
           <div class="timeline-year">2015</div>
-          <div class="timeline-text">イタリアのファッショングループ「OTB（Only The Brave）」がマルニを買収。</div>
+          <div class="timeline-text">イタリアのファッショングループ「OTB（Only The Brave）」がマルニを買収。ディーゼルなどと同一グループに。</div>
         </div>
         <div class="timeline-item">
           <div class="timeline-year">2016</div>
-          <div class="timeline-text">創業者コンスエロがクリエイティブ・ディレクターを退任。フランチェスコ・リッソが後任に就任。</div>
+          <div class="timeline-text">創業者コンスエロがCDを退任。フランチェスコ・リッソ（元プラダ）が後任に就任。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-text">創業30周年。ブルックリン・東京・パリを経てミラノ中央駅トンネルで祝祭ショーを開催。</div>
         </div>
         <div class="timeline-item">
           <div class="timeline-year">2025</div>
-          <div class="timeline-text">ベルギー人デザイナー、メリル・ロッゲが新クリエイティブ・ディレクターに就任。新時代へ。</div>
+          <div class="timeline-text">フランチェスコ・リッソが6月に退任（約9年間在任）。7月、ベルギー人デザイナーのメリル・ロッゲが新CDに就任。</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SLIDE 4: FOUNDER -->
+  <!-- SLIDE 4: FOUNDERS & CDs -->
   <div class="slide slide-split" data-index="3">
     <div class="split-left">
       <div class="split-label">Founder · 創業者</div>
       <div class="split-name">Consuelo<br>Castiglioni</div>
-      <div class="split-period">1994 — 2016</div>
+      <div class="split-period">CD 1994 — 2016</div>
       <div class="split-desc">
-        スイス・ルガーノ出身（チリ系）のファッションデザイナー。夫ジャンニ・カスティリオーニの毛皮ビジネスから着想を得てマルニを創設。<br><br>
-        独学で培った独自の美意識により、"エクレクティック・ボヘミアニズム"というマルニ固有の世界観を確立。22年間にわたりブランドを主導した。
+        スイス・ルガーノ出身（チリ系）のデザイナー。夫ジャンニの毛皮ビジネスから着想を得てマルニを創設。独学の美意識から"エクレクティック・ボヘミアニズム"という固有の世界観を確立。22年間ブランドを主導した。
+      </div>
+      <div class="split-divider"></div>
+      <div class="split-label">2nd Creative Director</div>
+      <div class="split-name" style="font-size: clamp(18px,2.5vw,34px);">Francesco Risso</div>
+      <div class="split-period">CD 2016 — 2025</div>
+      <div class="split-desc">
+        イタリア出身、ポリモーダ／セントラル・セント・マーティンズで学ぶ。プラダ勤務後に就任。鮮烈な色使いと体験型ショーでブランドを更新。
       </div>
     </div>
     <div class="split-right">
       <div class="split-label">Current Creative Director · 現クリエイティブ・ディレクター</div>
       <div class="split-name-dark">Meryll<br>Rogge</div>
-      <div class="split-period" style="color:#2a9d8f;">2025 — Present</div>
+      <div class="split-period" style="color:#2a9d8f;">CD 2025 — Present</div>
       <div class="split-desc-dark">
-        ベルギー出身。アントワープ王立芸術学院で学び、Marc JacobsやDries Van Notenで経験を積む。2020年に自身のブランドを設立後、2025年ANDAMグランプリを受賞。<br><br>
-        マルニ史上3人目のクリエイティブ・ディレクターとして就任。90年代〜2000年代初頭のマルニエッセンスを現代的に昇華したコレクションで新時代を牽引。
+        ベルギー出身。アントワープ王立芸術学院を卒業後、Marc JacobsやDries Van Notenでキャリアを積む。2020年に自身のブランドを設立し、2025年ANDAMグランプリを受賞。マルニ史上3人目のCDとして就任し、新時代を牽引。
+      </div>
+      <div class="split-divider-light"></div>
+      <div style="display:flex; flex-wrap:wrap; gap:6px;">
+        <span class="tag">Antwerp Royal Academy</span>
+        <span class="tag green">Marc Jacobs</span>
+        <span class="tag blue">Dries Van Noten</span>
+        <span class="tag orange">ANDAM 2025受賞</span>
+        <span class="tag purple">マルニ初のベルギー人CD</span>
       </div>
     </div>
   </div>
 
-  <!-- SLIDE 5: DESIGN -->
+  <!-- SLIDE 5: DESIGN DNA -->
   <div class="slide slide-content" data-index="4">
     <div class="side-bar"></div>
     <div class="slide-inner">
       <div class="slide-label">Design DNA · デザインの特徴</div>
       <div class="slide-title">マルニの<br><span>世界観</span></div>
-      <div class="cards" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="card">
-          <div class="card-icon">🌸</div>
-          <div class="card-title">大胆なプリント</div>
-          <div class="card-text">花柄・ドット・ストライプ・幾何学模様。柄同士を組み合わせた"計算されたカオス"がマルニの真髄。</div>
+      <div class="two-col">
+        <div>
+          <div class="dna-list">
+            <div class="dna-item">
+              <div class="dna-bar" style="background:#e63946;"></div>
+              <div class="dna-body">
+                <div class="dna-title">🌸 大胆なプリント</div>
+                <div class="dna-text">花柄・ドット・ストライプ・幾何学模様。複数の柄を組み合わせた"計算されたカオス"がブランドの核心。</div>
+              </div>
+            </div>
+            <div class="dna-item">
+              <div class="dna-bar" style="background:#f4a261;"></div>
+              <div class="dna-body">
+                <div class="dna-title">🎨 独自のカラーパレット</div>
+                <div class="dna-text">恐れない色使いと意外性のある色の組み合わせ。シーズンごとに新鮮でありながら確かにマルニらしい。</div>
+              </div>
+            </div>
+            <div class="dna-item">
+              <div class="dna-bar" style="background:#2a9d8f;"></div>
+              <div class="dna-body">
+                <div class="dna-title">📐 構築的シルエット</div>
+                <div class="dna-text">ボリュームを活かした建築的フォルム。柔らかな素材との対比が生む独特の緊張感がアイデンティティ。</div>
+              </div>
+            </div>
+            <div class="dna-item">
+              <div class="dna-bar" style="background:#457b9d;"></div>
+              <div class="dna-body">
+                <div class="dna-title">✂️ 素材へのこだわり</div>
+                <div class="dna-text">毛皮・レザーを起源に持つブランドゆえ、希少素材の選定と革新的な素材使いへの探求が続く。</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="card" style="border-top-color:#f4a261;">
-          <div class="card-icon">🎨</div>
-          <div class="card-title">鮮やかな色彩</div>
-          <div class="card-text">恐れない色使い。独自のカラーパレットで組み合わされた配色は、他ブランドとの差異化要素。</div>
-        </div>
-        <div class="card" style="border-top-color:#2a9d8f;">
-          <div class="card-icon">📐</div>
-          <div class="card-title">構築的シルエット</div>
-          <div class="card-text">ボリュームの巧みな使い方と建築的なフォルム。シフォンなど柔らか素材との対比が独自の雰囲気を生む。</div>
-        </div>
-        <div class="card" style="border-top-color:#457b9d;">
-          <div class="card-icon">✂️</div>
-          <div class="card-title">素材へのこだわり</div>
-          <div class="card-text">毛皮・レザーを起源に持ち、希少素材の選定と革新的な素材使いへの探求が続く。</div>
-        </div>
-        <div class="card" style="border-top-color:#e9c46a;">
-          <div class="card-icon">💫</div>
-          <div class="card-title">大人可愛い</div>
-          <div class="card-text">派手さの中に上品さ。遊び心と洗練さが同居する"大人可愛い"スタイルで幅広い世代を魅了。</div>
-        </div>
-        <div class="card" style="border-top-color:#6d6875;">
-          <div class="card-icon">🌡️</div>
-          <div class="card-title">温かみのある個性</div>
-          <div class="card-text">手作り感、ぬくもり、ユニークさ。マルニマーケットなどアーティザナルな取り組みもブランドらしさ。</div>
+        <div>
+          <div class="dna-list">
+            <div class="dna-item">
+              <div class="dna-bar" style="background:#e9c46a;"></div>
+              <div class="dna-body">
+                <div class="dna-title">💫 大人のエクレクティシズム</div>
+                <div class="dna-text">遊び心と上品さが共存。過剰なまでの個性の中に宿る洗練が、幅広い世代・文化圏で支持される理由。</div>
+              </div>
+            </div>
+            <div class="dna-item">
+              <div class="dna-bar" style="background:#6d6875;"></div>
+              <div class="dna-body">
+                <div class="dna-title">🤲 手工芸・アーティザナル性</div>
+                <div class="dna-text">「マルニマーケット」など手作り感を打ち出した取り組みもブランドの重要なDNA。温かみと個性を体現。</div>
+              </div>
+            </div>
+            <div class="dna-item">
+              <div class="dna-bar" style="background:#e63946;"></div>
+              <div class="dna-body">
+                <div class="dna-title">🎭 体験型ショー</div>
+                <div class="dna-text">フランチェスコ・リッソ時代には没入型のショー演出が話題に。ブランドを"見せる"ではなく"体験する"ものへ。</div>
+              </div>
+            </div>
+            <div class="dna-item">
+              <div class="dna-bar" style="background:#2a9d8f;"></div>
+              <div class="dna-body">
+                <div class="dna-title">🌿 ボヘミアン精神</div>
+                <div class="dna-text">自由・独立・自己表現。型にはまらないライフスタイルへの共鳴がマルニ支持者に共通するエトス。</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -546,45 +732,81 @@
   <div class="slide slide-content" data-index="5">
     <div class="side-bar"></div>
     <div class="slide-inner">
-      <div class="slide-label">Products · 人気アイテム</div>
-      <div class="slide-title">代表的な<br><span>プロダクト</span></div>
+      <div class="slide-label">Products · 代表的なアイテム</div>
+      <div class="slide-title">人気<br><span>プロダクト</span></div>
       <div class="items-grid">
         <div class="item-box">
           <div class="item-icon">👜</div>
-          <div class="item-name">バッグ</div>
-          <div class="item-note">トートバッグ・ショルダーバッグ。マルニマーケットの手作り感あるバッグも人気。</div>
+          <div class="item-name">レザーバッグ</div>
+          <div class="item-note">トートバッグ・ショルダーバッグ。高品質な革素材とブランドらしいカラーで人気。フラッグシップ商品。</div>
+        </div>
+        <div class="item-box">
+          <div class="item-icon">🧶</div>
+          <div class="item-name">マルニマーケット</div>
+          <div class="item-note">職人の手作り感あるラフィアバッグなどアーティザナルなアイテム。ファッション界の注目を集めた人気ライン。</div>
         </div>
         <div class="item-box">
           <div class="item-icon">👗</div>
-          <div class="item-name">ワンピース</div>
-          <div class="item-note">独特のプリントと構築的シルエットが融合した代名詞的アイテム。</div>
+          <div class="item-name">ドレス・ワンピース</div>
+          <div class="item-note">独特のプリントと構築的シルエットが融合。マルニらしさを最も体現するアイコニックなアイテム。</div>
         </div>
         <div class="item-box">
           <div class="item-icon">👟</div>
           <div class="item-name">シューズ</div>
-          <div class="item-note">サンダル・スニーカー・ミュール。コレクションごとに独創的なデザインを展開。</div>
+          <div class="item-note">サンダル・スニーカー・ミュール。コレクションごとに独創的なデザインを展開し高い注目度を誇る。</div>
         </div>
         <div class="item-box">
           <div class="item-icon">👕</div>
-          <div class="item-name">Tシャツ</div>
-          <div class="item-note">グラフィックやプリントを大胆に配置。カジュアルなエントリーアイテムとして人気。</div>
+          <div class="item-name">Tシャツ・スウェット</div>
+          <div class="item-note">グラフィックやプリントを大胆に配置。ブランドへのカジュアルなエントリーアイテムとして人気が高い。</div>
         </div>
         <div class="item-box">
           <div class="item-icon">💳</div>
-          <div class="item-name">財布・小物</div>
-          <div class="item-note">カラフルで個性的な財布やカードケース。ギフトにも選ばれる定番アイテム。</div>
-        </div>
-        <div class="item-box">
-          <div class="item-icon">🧣</div>
-          <div class="item-name">マフラー・スカーフ</div>
-          <div class="item-note">ブランドらしいプリントを楽しめる入門アイテム。コーディネートのアクセントに。</div>
+          <div class="item-name">財布・スカーフ</div>
+          <div class="item-note">カラフルで個性的な小物類。ギフト需要も高く、ブランドの世界観を手軽に楽しめるエントリー商品。</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SLIDE 7: PRICE -->
+  <!-- SLIDE 7: JAPAN -->
   <div class="slide slide-content" data-index="6">
+    <div class="side-bar"></div>
+    <div class="slide-inner">
+      <div class="slide-label">Japan Market · 日本市場</div>
+      <div class="slide-title">日本との<br><span>深い縁</span></div>
+      <div class="two-col">
+        <div class="col-block">
+          <div class="col-block-title">日本展開の主要なマイルストーン</div>
+          <ul>
+            <li><strong>1999年</strong>：日本初上陸。ラグジュアリーファッション市場の成熟と好相性。</li>
+            <li><strong>2000年秋</strong>：東京・南青山に当時世界最大（約330㎡）の旗艦店オープン。建築家ユニット「Future Systems」が設計、曲線で構成されたユニークな空間。</li>
+            <li><strong>日本の位置づけ</strong>：創業初期から最優先市場のひとつ。世界展開の中でも別格の重要度。</li>
+            <li><strong>2024年</strong>：30周年ツアーに東京が含まれ、日本市場への継続的な重視を示す。</li>
+          </ul>
+        </div>
+        <div class="col-block">
+          <div class="col-block-title">日本でのブランド評価と特性</div>
+          <ul>
+            <li>個性的なデザインを好む日本のファッションエリート層に深く支持。</li>
+            <li>"大人可愛い"・自己表現を重視する30〜40代女性に特に響くポジション。</li>
+            <li>セカンドハンド（リユース）市場でもマルニはブランド価値を維持。</li>
+            <li>百貨店・セレクトショップ・直営店など幅広いチャネルで展開。</li>
+            <li>コレクションライン〜マルニマーケットまで価格帯の幅広さが購入者層を拡大。</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:18px; display:flex; flex-wrap:wrap; gap:5px;">
+        <span class="tag">1999年日本上陸</span>
+        <span class="tag green">南青山旗艦店（2000）</span>
+        <span class="tag orange">Future Systems設計</span>
+        <span class="tag blue">30周年東京ツアー（2024）</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: PRICE & TARGET -->
+  <div class="slide slide-content" data-index="7">
     <div class="side-bar"></div>
     <div class="slide-inner">
       <div class="slide-label">Price &amp; Market · 価格帯とターゲット</div>
@@ -600,50 +822,55 @@
         <tbody>
           <tr>
             <td>レザーバッグ（メイン）</td>
-            <td class="price-high">¥150,000 〜 ¥300,000+</td>
-            <td>フラッグシップコレクション</td>
+            <td class="price-high">¥150,000 〜 ¥350,000+</td>
+            <td>フラッグシップ・高い希少価値</td>
           </tr>
           <tr>
             <td>マルニマーケット バッグ</td>
-            <td>¥30,000 〜 ¥80,000</td>
-            <td>手工芸・よりリーズナブル</td>
+            <td>¥40,000 〜 ¥90,000</td>
+            <td>手工芸・よりアクセスしやすい</td>
           </tr>
           <tr>
-            <td>ワンピース・トップス</td>
-            <td>¥50,000 〜 ¥200,000</td>
-            <td>素材・デザインで幅広い</td>
+            <td>ドレス・ワンピース</td>
+            <td>¥60,000 〜 ¥250,000</td>
+            <td>素材・コレクションにより幅広い</td>
           </tr>
           <tr>
             <td>シューズ</td>
-            <td>¥60,000 〜 ¥150,000</td>
-            <td>サンダル〜スニーカー</td>
+            <td>¥60,000 〜 ¥160,000</td>
+            <td>サンダル〜ブーツまで</td>
           </tr>
           <tr>
             <td>Tシャツ・スウェット</td>
-            <td>¥30,000 〜 ¥80,000</td>
-            <td>カジュアルエントリーライン</td>
+            <td>¥35,000 〜 ¥90,000</td>
+            <td>エントリーアイテムとして人気</td>
           </tr>
           <tr>
-            <td>財布・小物</td>
-            <td>¥20,000 〜 ¥60,000</td>
-            <td>ギフト需要も高い</td>
+            <td>財布・スカーフ等</td>
+            <td>¥20,000 〜 ¥70,000</td>
+            <td>ギフト需要・ブランド入門に</td>
           </tr>
         </tbody>
       </table>
-      <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:4px;">
-        <span class="tag">ターゲット層: 20〜40代</span>
+      <div style="margin-top:16px; display:flex; flex-wrap:wrap; gap:4px;">
+        <span class="tag">主ターゲット: 20〜40代</span>
         <span class="tag green">個性・自己表現を重視する層</span>
         <span class="tag orange">OTBグループ傘下</span>
-        <span class="tag blue">世界主要都市＋日本157店舗</span>
+        <span class="tag blue">ミラノ・東京・パリ・NYに旗艦店</span>
+        <span class="tag purple">リユース市場でもブランド価値高</span>
       </div>
     </div>
   </div>
 
-  <!-- SLIDE 8: CLOSING -->
-  <div class="slide slide-closing" data-index="7">
+  <!-- SLIDE 9: CLOSING -->
+  <div class="slide slide-closing" data-index="8">
     <div class="closing-marni">MARNI</div>
     <div class="cover-line"></div>
-    <div class="closing-tagline">"Fashion is a game. You have to know the rules to break them."</div>
+    <div class="closing-tagline">
+      大胆な色彩と独創的なプリントで30年間独自の世界観を守り続ける。<br>
+      "エクレクティック・ボヘミアニズム"というブランドコアは、<br>
+      メリル・ロッゲのもとで新時代へと受け継がれる。
+    </div>
     <div class="closing-dots">
       <div class="dot" style="background:#e63946;"></div>
       <div class="dot" style="background:#f4a261;"></div>
@@ -652,7 +879,7 @@
       <div class="dot" style="background:#e9c46a;"></div>
     </div>
     <div style="color:#555; font-size:13px; letter-spacing:0.2em; text-transform:uppercase;">
-      1994 — Present · Milan, Italy
+      1994 — Present · Milan, Italy · OTB Group
     </div>
   </div>
 
@@ -661,7 +888,7 @@
 <!-- Navigation -->
 <div class="nav">
   <button id="prevBtn">← 前へ</button>
-  <span class="nav-counter" id="counter">1 / 8</span>
+  <span class="nav-counter" id="counter">1 / 9</span>
   <button id="nextBtn">次へ →</button>
 </div>
 
@@ -674,7 +901,6 @@
   const dotsNav = document.getElementById('dotsNav');
   let current = 0;
 
-  // Build dot nav
   slides.forEach((_, i) => {
     const d = document.createElement('div');
     d.className = 'nav-dot' + (i === 0 ? ' active' : '');
@@ -700,7 +926,6 @@
     if (e.key === 'ArrowLeft') goTo(current - 1);
   });
 
-  // init
   progress.style.width = `${(1 / slides.length) * 100}%`;
 </script>
 
