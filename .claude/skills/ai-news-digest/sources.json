@@ -1,0 +1,28 @@
+{
+  "youtube_channels": [
+    { "handle": "@TwoMinutePapers", "channel_id": "UCbfYPyITQ-7l4upoX8nvctg", "note": "AI 研究論文の解説 (英語)" },
+    { "handle": "@aiexplained-official", "note": "最新 AI モデル・業界動向の深掘り (英語)" },
+    { "handle": "@mreflow", "note": "Matt Wolfe: AI ツール・ニュースまとめ (英語)" },
+    { "handle": "@YannicKilcher", "note": "ML 論文レビュー・AI ニュース (英語)" },
+    { "handle": "@WesRoth", "note": "AI ニュース速報 (英語)" },
+    { "handle": "@anthropic-ai", "note": "Anthropic 公式" },
+    { "handle": "@OpenAI", "note": "OpenAI 公式" },
+    { "handle": "@GoogleDeepMind", "note": "Google DeepMind 公式" }
+  ],
+  "x_accounts": [
+    { "handle": "@OpenAI", "note": "OpenAI 公式" },
+    { "handle": "@AnthropicAI", "note": "Anthropic 公式" },
+    { "handle": "@GoogleDeepMind", "note": "Google DeepMind 公式" },
+    { "handle": "@sama", "note": "Sam Altman" },
+    { "handle": "@karpathy", "note": "Andrej Karpathy" },
+    { "handle": "@ylecun", "note": "Yann LeCun" },
+    { "handle": "@_akhaliq", "note": "AK: 注目論文・デモの紹介" },
+    { "handle": "@npaka123", "note": "布留川英一: 日本語 AI 技術情報" }
+  ],
+  "search_keywords": [
+    "AI 最新ニュース",
+    "LLM 新モデル 発表",
+    "generative AI announcement",
+    "AI model release this week"
+  ]
+}
