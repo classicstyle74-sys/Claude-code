@@ -1,0 +1,50 @@
+# マルニ週次情報収集 設定ファイル
+# キーワード・カテゴリはここを編集するだけで変更できます。
+
+target:
+  brand: "MARNI（マルニ）"
+  business: "日本の百貨店におけるマルニ関連ビジネス（売場・仕入れ・販促）"
+  language: "ja"
+
+output:
+  base_dir: "reports/marni-weekly"
+
+categories:
+  - id: "01-brand-news"
+    name: "ブランド公式動向"
+    queries:
+      - "MARNI マルニ 新作 ニュース"
+      - "マルニ コラボ 発売"
+      - "MARNI コレクション 2026"
+
+  - id: "02-sns-buzz"
+    name: "SNS・話題"
+    queries:
+      - "マルニ MARNI 話題 SNS 人気"
+      - "マルニ バッグ 口コミ 流行"
+      - "MARNI トレンド X Twitter"
+
+  - id: "03-dept-store"
+    name: "百貨店業界動向"
+    queries:
+      - "百貨店 売上 動向"
+      - "百貨店 ラグジュアリー インバウンド 免税"
+      - "三越伊勢丹 高島屋 阪急 施策 ニュース"
+
+  - id: "04-competitors"
+    name: "競合・ラグジュアリー市場"
+    queries:
+      - "OTBグループ ジルサンダー メゾンマルジェラ ニュース"
+      - "ラグジュアリーブランド 日本市場 動向"
+      - "プラダ ミュウミュウ ロエベ 人気 日本"
+
+  - id: "05-consumer-trends"
+    name: "消費者・ファッショントレンド"
+    queries:
+      - "ファッショントレンド 今週 日本"
+      - "Z世代 ラグジュアリー 消費 トレンド"
+      - "カラフル ニット バッグ トレンド 2026"
+
+schedule:
+  # 推奨: 毎週月曜 9:00 JST に自動実行（Routine / cron: "0 0 * * 1" UTC）
+  note: "自動実行の設定・停止はセッションで『週次レポートの自動実行を止めて』等と依頼"

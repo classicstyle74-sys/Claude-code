@@ -1,0 +1,188 @@
+<title>マルニ週次レポート 2026-W28</title>
+<style>
+  :root {
+    --bg: #FAF8F3;
+    --surface: #FFFFFF;
+    --ink: #26221C;
+    --ink-soft: #6E675C;
+    --line: #E6E0D4;
+    --accent: #D8431F;
+    --c-brand: #D8431F;
+    --c-sns: #C99414;
+    --c-dept: #2C4EBB;
+    --c-comp: #8A4B6E;
+    --c-trend: #3E7C4F;
+    --chip-bg: #F1EDE3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1D1B17;
+      --surface: #26231E;
+      --ink: #EFEAE0;
+      --ink-soft: #A79E8F;
+      --line: #3A362E;
+      --accent: #F0603C;
+      --c-brand: #F0603C;
+      --c-sns: #E0B040;
+      --c-dept: #6E8AE8;
+      --c-comp: #C07BA0;
+      --c-trend: #6FAE80;
+      --chip-bg: #322E27;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #FAF8F3; --surface: #FFFFFF; --ink: #26221C; --ink-soft: #6E675C;
+    --line: #E6E0D4; --accent: #D8431F; --c-brand: #D8431F; --c-sns: #C99414;
+    --c-dept: #2C4EBB; --c-comp: #8A4B6E; --c-trend: #3E7C4F; --chip-bg: #F1EDE3;
+  }
+  :root[data-theme="dark"] {
+    --bg: #1D1B17; --surface: #26231E; --ink: #EFEAE0; --ink-soft: #A79E8F;
+    --line: #3A362E; --accent: #F0603C; --c-brand: #F0603C; --c-sns: #E0B040;
+    --c-dept: #6E8AE8; --c-comp: #C07BA0; --c-trend: #6FAE80; --chip-bg: #322E27;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+    line-height: 1.75;
+    margin: 0;
+    padding: 0 1.25rem 4rem;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; }
+
+  header { padding: 2.5rem 0 1.5rem; border-bottom: 3px solid var(--ink); }
+  .stripe-row { display: flex; height: 6px; margin-bottom: 2rem; }
+  .stripe-row span { flex: 1; }
+  .eyebrow {
+    font-size: .75rem; letter-spacing: .18em; color: var(--ink-soft);
+    text-transform: uppercase; margin: 0 0 .4rem;
+  }
+  h1 { font-size: 1.7rem; margin: 0 0 .5rem; text-wrap: balance; line-height: 1.35; }
+  .meta { color: var(--ink-soft); font-size: .85rem; margin: 0; font-variant-numeric: tabular-nums; }
+
+  h2 {
+    font-size: 1.05rem; letter-spacing: .06em; margin: 2.5rem 0 1rem;
+    display: flex; align-items: center; gap: .6rem;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  ol.highlights { margin: 0; padding: 0; list-style: none; counter-reset: hl; display: grid; gap: .75rem; }
+  ol.highlights li {
+    counter-increment: hl; display: flex; gap: .85rem; align-items: baseline;
+    background: var(--surface); border: 1px solid var(--line);
+    padding: .8rem 1rem; font-size: .95rem;
+  }
+  ol.highlights li::before {
+    content: counter(hl); font-weight: 700; color: var(--accent);
+    font-size: 1.1rem; font-variant-numeric: tabular-nums; min-width: 1.1rem;
+  }
+
+  ul.actions { margin: 0; padding: 0; list-style: none; display: grid; gap: .6rem; }
+  ul.actions li { display: flex; gap: .7rem; align-items: baseline; font-size: .95rem; }
+  ul.actions li::before { content: "▶"; color: var(--accent); font-size: .7rem; }
+  ul.actions strong { font-weight: 700; }
+
+  .cards { display: grid; gap: 1rem; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-left: 6px solid var(--cat, var(--accent));
+    padding: 1rem 1.2rem;
+  }
+  .card h3 { margin: 0 0 .35rem; font-size: .98rem; }
+  .card p { margin: 0; font-size: .9rem; color: var(--ink-soft); }
+  .card .tag {
+    display: inline-block; font-size: .7rem; letter-spacing: .12em;
+    background: var(--chip-bg); color: var(--ink); padding: .1rem .55rem;
+    margin-bottom: .5rem;
+  }
+  .c1 { --cat: var(--c-brand); }
+  .c2 { --cat: var(--c-sns); }
+  .c3 { --cat: var(--c-dept); }
+  .c4 { --cat: var(--c-comp); }
+  .c5 { --cat: var(--c-trend); }
+
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 1rem; }
+  .kpi { background: var(--surface); border: 1px solid var(--line); padding: .9rem 1rem; }
+  .kpi .n { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .kpi .n.up { color: var(--c-trend); }
+  .kpi .n.down { color: var(--accent); }
+  .kpi .l { font-size: .78rem; color: var(--ink-soft); margin-top: .15rem; line-height: 1.5; }
+
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+    font-size: .8rem; color: var(--ink-soft); }
+  a { color: inherit; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="stripe-row" aria-hidden="true">
+      <span style="background:var(--c-brand)"></span>
+      <span style="background:var(--c-sns)"></span>
+      <span style="background:var(--c-dept)"></span>
+      <span style="background:var(--c-comp)"></span>
+      <span style="background:var(--c-trend)"></span>
+    </div>
+    <p class="eyebrow">MARNI Weekly Intelligence</p>
+    <h1>マルニ 週次レポート 2026-W28</h1>
+    <p class="meta">対象期間 2026年7月6日（月）〜 7月12日（日） ／ 作成 2026-07-11</p>
+  </header>
+
+  <h2>今週の数字</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="n up">+16.7%</div><div class="l">5月 百貨店免税売上<br>（3カ月連続プラス）</div></div>
+    <div class="kpi"><div class="n up">+17%</div><div class="l">阪急うめだ本店<br>6月売上（前年比）</div></div>
+    <div class="kpi"><div class="n up">9.8万円</div><div class="l">免税客の購買単価<br>（前年比 +24.5%）</div></div>
+    <div class="kpi"><div class="n down">−6.3%</div><div class="l">免税購買客数<br>（7カ月連続マイナス）</div></div>
+  </div>
+
+  <h2>今週のハイライト</h2>
+  <ol class="highlights">
+    <li>大手百貨店4社の6月売上が前年超え。ラグジュアリー・高額品が牽引（阪急うめだ +17%、伊勢丹新宿 +13%）。</li>
+    <li>免税売上は3カ月連続プラスだが、中国客数は約3割減。香港・台湾・韓国・東南アジアへ客層シフトが鮮明。</li>
+    <li>新CDメリル・ロッゲの「新生マルニ」26AWが業界で好評 — カスティリオーニ期の遊び心へ回帰。今秋店頭へ。</li>
+    <li>マルニ×Serax コラボが 7/15 で終了間近。UNIQLO F.RISSO（前CD）発売でマルニ的デザインが大衆層に露出中。</li>
+    <li>夏バッグはラフィア素材・カラフル系トレンドが継続 — マルニ マーケットのかごバッグと合致。</li>
+  </ol>
+
+  <h2>アクション提案</h2>
+  <ul class="actions">
+    <li><strong>26AW立ち上がり準備</strong> — 「新生マルニ・原点回帰」のストーリーをVMD・接客トークへ。</li>
+    <li><strong>免税客層シフト対応</strong> — 繁体字・韓国語表示と高単価接客の質を優先。決済手段も見直し。</li>
+    <li><strong>ラフィア・カラフルバッグ在庫確保</strong> — マルニ マーケット型ポップアップの企画検討。</li>
+    <li><strong>UNIQLO×リッソ話題への便乗発信</strong> — 本家の素材・クラフト優位を訴求し回遊を狙う。</li>
+  </ul>
+
+  <h2>カテゴリ別サマリー</h2>
+  <div class="cards">
+    <div class="card c1">
+      <span class="tag">01 ブランド公式動向</span>
+      <h3>ロッゲ体制の26AWが好評、コラボ・ポップアップも活発</h3>
+      <p>デビューコレクションは「アーカイブ回帰」と評価。Seraxコラボは7/15終了。阪急うめだ・伊勢丹新宿・岩田屋でポップアップ実績。</p>
+    </div>
+    <div class="card c2">
+      <span class="tag">02 SNS・話題</span>
+      <h3>カラフルバッグ人気が継続、30〜40代にも浸透</h3>
+      <p>インフルエンサー発の話題が購買動機に。LEE読者スナップでマルニ マーケットのバッグが定番化。今週の新規バズは特筆なし。</p>
+    </div>
+    <div class="card c3">
+      <span class="tag">03 百貨店業界動向</span>
+      <h3>6月売上は4社とも前年超え、免税は構造変化が進行</h3>
+      <p>高額品堅調・衣料苦戦。免税は「少ない客数×高単価」へ移行し、中国減・他アジア増。夏セールは中盤。</p>
+    </div>
+    <div class="card c4">
+      <span class="tag">04 競合・ラグジュアリー市場</span>
+      <h3>OTBは日本を重点市場に。市場はブランド選別の時代へ</h3>
+      <p>OTBはマルジェラ・ディーゼルが過去最高業績で日本・北米が成長ドライバー。エルメス増収・ケリング減収と明暗。</p>
+    </div>
+    <div class="card c5">
+      <span class="tag">05 消費者・トレンド</span>
+      <h3>夏バッグはラフィア・イーストウエスト型、Z世代は体験重視</h3>
+      <p>日本の高級アパレル市場は年率4.3%成長見通し。Z世代は実店舗×EC併用で世界観・体験の質を重視。</p>
+    </div>
+  </div>
+
+  <footer>
+    詳細と出典URLは同フォルダの各Markdownファイル（01〜05・sources.md）を参照。
+    このダッシュボードは <code>/marni-weekly</code> スキルにより自動生成されました。
+  </footer>
+</div>
