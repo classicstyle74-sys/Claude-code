@@ -1,0 +1,138 @@
+<title>三上式 初期設定の判断シート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f3f5f4; --surface:#ffffff; --ink:#1d2624; --muted:#5b6865; --line:#d5dcda;
+  --accent:#2d6a5f; --accent-soft:#e3efec; --rec:#8a5a12; --rec-soft:#f7eedd;
+  --font:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#131918; --surface:#1b2321; --ink:#e4ebe9; --muted:#9aa8a5; --line:#2e3a37;
+    --accent:#6cc0b0; --accent-soft:#1f3531; --rec:#e0b36a; --rec-soft:#3a2e1a;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#131918; --surface:#1b2321; --ink:#e4ebe9; --muted:#9aa8a5; --line:#2e3a37;
+  --accent:#6cc0b0; --accent-soft:#1f3531; --rec:#e0b36a; --rec-soft:#3a2e1a;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.7;padding-inline:16px;padding-block:28px 64px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+header h1{font-size:1.5rem;margin:0 0 4px;text-wrap:balance}
+header p{margin:0;color:var(--muted)}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:12px}
+.qhead{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.qid{font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;color:var(--accent)}
+.qhead h2{font-size:1.05rem;margin:0}
+.why{margin:0;color:var(--muted);font-size:.9rem}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start;border:1px solid var(--line);border-radius:8px;padding:10px 12px;cursor:pointer}
+.opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--accent)}
+.opt input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.opt b{font-weight:700}
+.opt .eff{display:block;color:var(--muted);font-size:.88rem}
+.rec{display:inline-block;margin-left:6px;font-size:.72rem;font-weight:700;letter-spacing:.04em;color:var(--rec);background:var(--rec-soft);border-radius:4px;padding:0 6px;vertical-align:1px}
+.free label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}
+.free input{width:100%;box-sizing:border-box;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.free input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.answer{background:var(--surface);border:1px solid var(--accent);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.answer h2{margin:0;font-size:1rem}
+.answer p{margin:0;color:var(--muted);font-size:.9rem}
+#out{width:100%;box-sizing:border-box;min-height:5.5em;font-family:var(--mono);font-size:.85rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px;resize:vertical}
+button{align-self:flex-start;font:inherit;font-weight:700;color:#fff;background:var(--accent);border:0;border-radius:6px;padding:8px 18px;cursor:pointer}
+:root[data-theme="dark"] button{color:#10201d}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) button{color:#10201d}}
+button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+#msg{font-size:.85rem;color:var(--accent);min-height:1.2em}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>初期設定の判断シート</h1>
+    <p>推奨をあらかじめ選んであります。変えたい所だけ選び直すか、自分の言葉で書いてください。最後に「答えをコピー」を押して、会話に貼り付けてください。</p>
+  </header>
+
+  <section class="q" data-q="Q1">
+    <div class="qhead"><span class="qid">Q1</span><h2>「確認は戻せない操作のときだけ」の型を入れますか</h2></div>
+    <p class="why">これを入れると、AIが確認を求める場面が変わります。</p>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="Q1" value="入れる" checked><span><b>入れる</b><span class="rec">推奨</span><span class="eff">下書き・調べもの・作業場のファイル・作業用ブランチへのコミットは、確認せずに進めて後で報告します。消す・外へ送る・お金が動く操作だけ、先に確認します。</span></span></label>
+      <label class="opt"><input type="radio" name="Q1" value="外す"><span><b>外す</b><span class="eff">これまでどおり、区切りごとに確認します。進みは遅くなりますが、途中で止めやすくなります。</span></span></label>
+    </div>
+    <p class="why">推奨の理由：何でも確認していると手間ばかり増えます。戻せない操作だけは必ず止まります。</p>
+    <div class="free"><label for="Q1-free">選択肢に無い答え（任意）</label><input id="Q1-free" type="text" placeholder="例：GitHubへのpushも確認してほしい"></div>
+  </section>
+
+  <section class="q" data-q="Q2">
+    <div class="qhead"><span class="qid">Q2</span><h2>毎朝の段取りを何時に書きますか（日本時間）</h2></div>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="Q2" value="7:00"><span><b>7:00</b><span class="eff">起きてすぐ読めます。前の晩に入れたToDoも反映されます。</span></span></label>
+      <label class="opt"><input type="radio" name="Q2" value="8:00" checked><span><b>8:00</b><span class="rec">推奨</span><span class="eff">始業前に、その日の段取りがそろいます。</span></span></label>
+      <label class="opt"><input type="radio" name="Q2" value="9:00"><span><b>9:00</b><span class="eff">朝のうちに足したToDoも入ります。ただ、読むのは仕事を始めた後になります。</span></span></label>
+    </div>
+    <p class="why">推奨の理由：クラウドで動くのでパソコンの電源は関係ありません。いちばん読みやすい、始業前の時刻にしています。</p>
+    <div class="free"><label for="Q2-free">選択肢に無い答え（任意）</label><input id="Q2-free" type="text" placeholder="例：平日だけ 7:30"></div>
+  </section>
+
+  <section class="q" data-q="Q3">
+    <div class="qhead"><span class="qid">Q3</span><h2>段取りをどこまで書きますか</h2></div>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="Q3" value="A 一言"><span><b>A　ゴールごとに一言</b><span class="eff">短く、すぐ読めます。何から手を付けるかは自分で考えます。</span></span></label>
+      <label class="opt"><input type="radio" name="Q3" value="B 最初の一手まで" checked><span><b>B　ゴールごとに最初の一手まで</b><span class="rec">推奨</span><span class="eff">各ゴールの中身を読んで、「最初にやること」を1行ずつ足します。そのまま動き出せます。</span></span></label>
+    </div>
+    <p class="why">推奨の理由：朝は、何から始めるかを決める手間がいちばん重いからです。</p>
+    <div class="free"><label for="Q3-free">選択肢に無い答え（任意）</label><input id="Q3-free" type="text" placeholder="例：優先順位の順に並べてほしい"></div>
+  </section>
+
+  <section class="q" data-q="Q4">
+    <div class="qhead"><span class="qid">Q4</span><h2>毎朝の自動化をどう動かしますか</h2></div>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="Q4" value="クラウドの定期実行" checked><span><b>クラウドの定期実行</b><span class="rec">推奨</span><span class="eff">毎朝決まった時刻に、クラウドのClaude Codeが段取りを書いて、GitHubの作業用ブランチに保存します。パソコンを開いていなくても動きます。</span></span></label>
+      <label class="opt"><input type="radio" name="Q4" value="手で動かす"><span><b>手で動かす</b><span class="eff">自動では動きません。朝、Claude Codeに「/morning-plan」と送った時だけ書きます。</span></span></label>
+    </div>
+    <p class="why">推奨の理由：アドネスのテンプレートの「毎朝、何もしなくても段取りがそろう」に一番近い形です。止めるのもいつでもできます。</p>
+    <div class="free"><label for="Q4-free">選択肢に無い答え（任意）</label><input id="Q4-free" type="text" placeholder="例：まず1週間だけ試したい"></div>
+  </section>
+
+  <section class="answer">
+    <h2>あなたの答え</h2>
+    <p>選んだ内容がここに入ります。「答えをコピー」を押して、会話に貼り付けてください。</p>
+    <textarea id="out" readonly aria-label="答えのまとめ"></textarea>
+    <button id="copy" type="button">答えをコピー</button>
+    <div id="msg" role="status"></div>
+  </section>
+</div>
+
+<script>
+(function(){
+  var qs=["Q1","Q2","Q3","Q4"];
+  var out=document.getElementById("out"), msg=document.getElementById("msg");
+  function build(){
+    var lines=qs.map(function(q){
+      var sel=document.querySelector('input[name="'+q+'"]:checked');
+      var free=document.getElementById(q+"-free").value.trim();
+      var v=sel?sel.value:"";
+      return q+": "+v+(free?"（補足："+free+"）":"");
+    });
+    out.value=lines.join("\n");
+  }
+  document.addEventListener("input",build);
+  document.addEventListener("change",build);
+  build();
+  document.getElementById("copy").addEventListener("click",function(){
+    build();
+    var done=function(){msg.textContent="コピーしました。会話に貼り付けてください。";};
+    var fallback=function(){out.focus();out.select();msg.textContent="自動でコピーできませんでした。選択された文字をコピーしてください。";};
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out.value).then(done,fallback);}
+      else{fallback();}
+    }catch(e){fallback();}
+  });
+})();
+</script>

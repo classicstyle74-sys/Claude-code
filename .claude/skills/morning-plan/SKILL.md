@@ -10,7 +10,7 @@ description: 今日のToDo（goals/ の today: true と期限が今日以前の�
 ## 手順
 
 1. 今日の日付を `TZ=Asia/Tokyo date '+%Y-%m-%d'` で確かめる。
-2. `goals/` の中から、`status` が `done` 以外で、`today: true` か `due` が今日以前のゴールを集める（`_template.md` は除く）。
+2. `goals/` の中から、`status` が `done` 以外で、`today: true` か `due` が今日以前のゴールを集める（先頭に `---` の設定があるファイルだけ。`README.md` と `_template.md` は除く）。
 3. 細かさは `automations/毎朝の段取り/README.md` の「細かさ」に従う。
    - **一言**：ゴールごとに「何をする日か」を1行。
    - **最初の一手まで**：各ゴールの理想・現状・ノートを読み、ゴールごとに「今日の最初の一手」を1行足す。

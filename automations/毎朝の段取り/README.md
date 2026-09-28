@@ -22,6 +22,13 @@
 - クラウドの定期実行（Routine）：毎朝決まった時刻に新しいクラウドのセッションが立ち上がり、このリポジトリで `/morning-plan` を実行し、`days/` をコミットして push する。
 - 手で動かす：Claude Code でこのリポジトリを開き、`/morning-plan` と送る。
 
+## 登録した定期実行
+
+- 名前：毎朝の段取り
+- ID：`trig_01RQ8ZqGVFDiXTnmMUJbHhNX`
+- スケジュール：`CRON_TZ=Asia/Tokyo 53 6 * * *`（毎日 6:53 日本時間）
+- 終わったらスマホに通知
+
 ## 止め方
 
 - claude.ai/code の「Routines」（定期実行の一覧）から「毎朝の段取り」を止めるか消す。
