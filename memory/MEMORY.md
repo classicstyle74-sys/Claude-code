@@ -16,3 +16,4 @@
 - [readme-is-a-map](readme-is-a-map.md) — フォルダの README は地図だけ。進み具合はゴールファイルへ
 - [explain-reasons-to-ai](explain-reasons-to-ai.md) — AIへの説明は、禁止の羅列ではなく、なぜそうするかを書く
 - [ask-only-for-irreversible](ask-only-for-irreversible.md) — 止まって許可を取るのは、消す・外へ送る・お金が動くなど戻せない操作だけ
+- [retail-excludes-flower-cafe-goods](retail-excludes-flower-cafe-goods.md) — 「Retail」で集計する時は Flower Café - Goods を除く
